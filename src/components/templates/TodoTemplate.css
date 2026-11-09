@@ -1,0 +1,20 @@
+/* src/components/templates/TodoTemplate.css */
+/* __form and __content need no rules of their own: the grid gap already spaces them.
+   They stay in the markup as styling hooks. */
+.todo-template {
+    max-width: 560px;
+    margin: 40px auto;
+    padding: 0 var(--space);
+    display: grid;
+    gap: var(--space);
+}
+.todo-template__header h1 {
+    margin: 0;
+    font-size: 1.75rem;
+}
+/* the template decides the layout of its slots */
+.todo-template__content {
+    display: grid;
+    gap: var(--space);
+}
+.todo-template__content > .btn { justify-self: start; }

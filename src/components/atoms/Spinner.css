@@ -1,0 +1,21 @@
+/* src/components/atoms/Spinner.css */
+.spinner {
+    display: inline-block;
+    border: 3px solid var(--color-muted);
+    border-top-color: var(--color-primary);
+    border-radius: 50%;
+    animation: spinner-rotate 0.8s linear infinite;
+}
+
+.spinner--sm { width: 16px; height: 16px; border-width: 2px; }
+.spinner--md { width: 32px; height: 32px; }
+.spinner--lg { width: 56px; height: 56px; border-width: 4px; }
+
+@keyframes spinner-rotate {
+    to { transform: rotate(360deg); }
+}
+
+/* Accesibilidad: si el usuario prefiere menos movimiento, lo ralentizamos */
+@media (prefers-reduced-motion: reduce) {
+    .spinner { animation-duration: 2s; }
+}
