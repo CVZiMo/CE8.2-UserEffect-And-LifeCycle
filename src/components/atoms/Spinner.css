@@ -15,7 +15,6 @@
     to { transform: rotate(360deg); }
 }
 
-/* Accesibilidad: si el usuario prefiere menos movimiento, lo ralentizamos */
 @media (prefers-reduced-motion: reduce) {
     .spinner { animation-duration: 2s; }
 }
